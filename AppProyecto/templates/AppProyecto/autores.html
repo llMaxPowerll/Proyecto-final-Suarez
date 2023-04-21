@@ -1,0 +1,38 @@
+{% extends 'AppProyecto/padre.html' %}
+
+{% block titulo %}Autores{% endblock %}
+
+{% block encabezado %}Autores{% endblock %}
+
+{% block contenido %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class= "col-lg-12"> 
+                {% if autoresformulario.errors %}
+                    <p style="color: red;"> Los datos estan mal, reviselos</p>
+                {% endif %}
+                
+                <h4>Autores</h4>
+                {% for autor in mis_autores %}
+                Autor: {{ autor.nombre }}&nbsp; {{ autor.apellido }}&nbsp;&nbsp;&nbsp;&nbsp;Edad: {{ autor.edad }} <br>
+                {% endfor %}
+
+                {% if nuevo_autor %}
+                    <p>se agrego correctamente al autor {{nuevo_autor.nombre}} {{nuevo_autor.apellido}} Edad: {{nuevo_autor.edad}}</p>
+                {% endif %}
+
+
+                <form action="{%url 'autores' %}" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{autoresformulario.as_table }}
+                    </table>
+
+                    <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

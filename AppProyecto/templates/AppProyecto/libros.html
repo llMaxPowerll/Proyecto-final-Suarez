@@ -1,0 +1,38 @@
+{% extends 'AppProyecto/padre.html' %}
+
+{% block titulo %}Libros{% endblock %}
+
+{% block encabezado %}Libros{% endblock %}
+
+{% block contenido %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class= "col-lg-12"> 
+                {% if librosformulario.errors %}
+                    <p style="color: red;"> Los datos estan mal, reviselos</p>
+                {% endif %}
+                
+                <h4>Libros</h4>
+                {% for libro in mis_libros %}
+                Titulo: {{libro.titulo}}&nbsp;&nbsp;&nbsp;&nbsp; Editorial: {{libro.editorial}}&nbsp;&nbsp;&nbsp; Paginas: {{libro.paginas}} <br>
+                {% endfor %}
+
+                {% if nuevo_libro %}  
+                    <p>se agrego correctamente el libro {{nuevo_libro.titulo}} </p>
+                {% endif %}
+
+
+                <form action="{%url 'libros' %}" method="POST">
+                    {% csrf_token %}
+                    <table>
+                        {{ librosformulario.as_table }}
+                    </table>
+
+                    <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
