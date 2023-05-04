@@ -1,0 +1,25 @@
+{% extends 'AppProyecto/padre.html' %}
+
+{% block titulo %}Libros{% endblock %}
+
+{% block encabezado %}Libros{% endblock %}
+
+{% block contenido %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class= "col-lg-12"> 
+                <form  method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                        {{ form.as_p }}
+                    
+
+                    <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+<!-- listo -->

@@ -1,0 +1,30 @@
+{% extends 'AppProyecto/padre.html' %}
+
+{% block titulo %}Autores{% endblock %}
+
+{% block encabezado %}Autores{% endblock %}
+
+{% block contenido %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class= "col-lg-12"> 
+               
+                <h4>Editar Autor</h4>
+               
+
+                <form  method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    
+                        {{ form.as_p }}
+                    
+
+                    <input type="submit" value="Enviar">
+                </form>    
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+<!-- listo -->

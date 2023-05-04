@@ -21,10 +21,20 @@
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
                 <a class="navbar-brand" href="{% url 'inicio' %}">Infolibro</a>
-                <a href="{% url 'autores' %}">Autores</a>
-                <a href="{% url 'libros' %}">Libros</a>
-                <a href="{% url 'bibliotecas' %}">Bibliotecas</a>
-                <a class="btn btn-primary" href="{% url 'inicio' %}">inicio</a>
+                <a href="{% url 'list-autor' %}">Autores</a>
+                <a href="{% url 'reed-libros' %}">Libros</a>
+                <a href="{% url 'list-biblioteca' %}">Bibliotecas</a>
+                {% if user.is_authenticated %}
+                <p class="navbar-brand" style="margin-top: 1rem;margin-bottom: 1rem;">Hola {{ user.username}}
+                <img src="{{ user.avatar.imagen.url }}" class="rounded-circle" height="40px" style="margin-right: 1rem">
+                <a href="{% url 'logout' %}">log out |</a>
+                <a href="{% url 'edit-usuario' %}">Editar perfil</a>
+                </p>
+
+                {% else %}
+                <a class="btn btn-primary" href="{% url 'login' %}">log in</a>
+                {% endif %}
+
 
             </div>
         </nav>
@@ -52,7 +62,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                        <ul class="list-inline mb-2">
+                        <ul class="list-inline mb-2"><!--
                             <li class="list-inline-item"><a href="#!">About</a></li>
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Contact</a></li>
@@ -60,6 +70,7 @@
                             <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
                             <li class="list-inline-item">⋅</li>
                             <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
+                        -->
                         </ul>
                         <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2022. All Rights Reserved.</p>
                     </div>
@@ -74,6 +85,7 @@
                             <li class="list-inline-item">
                                 <a href="#!"><i class="bi-instagram fs-3"></i></a>
                             </li>
+                        
                         </ul>
                     </div>
                 </div>
