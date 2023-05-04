@@ -70,7 +70,7 @@ def edit_usuario(request):
         form = UserEditForm(initial={'username':usuario.username,'email':usuario.email,'last_name':usuario.last_name,'first_name':usuario.first_name})
 
     contexto={'form':form,'usuario':usuario}
-    return render (request,'UserApp/editar-usuario.html',contexto)
+    return render (request,'AppLogueo/edit-usuario.html',contexto)
 
 
 @login_required
@@ -83,5 +83,6 @@ def add_avatar(request):
             form.save()
             return redirect('/')
     else:
-        return render(request,'UserApp/agregar-avatar.html',{'form':form})
+        return render(request,'AppLogueo/add-avatar.html',{'form':form})
 
+#Listo....
