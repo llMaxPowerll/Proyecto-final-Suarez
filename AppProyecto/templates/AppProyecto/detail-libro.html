@@ -15,14 +15,14 @@
                 <p>titulo: {{libro.titulo}}</p> 
                 <p>cantidad de paginas: {{libro.paginas}}</p>     
                 
-                <p>genero: {{libro.editorial}}</p>
+                <p>editorial: {{libro.editorial}}</p>
                 
                 <img src="{{ libro.portada.url }}"  height="500px">
                 
                 <p>reseña: {{libro.review}}</p>
                 
                 <p>
-                    <a href="{% url 'reed-libro' %}">Regresar</a>
+                    <a href="{% url 'reed-libros' %}">Regresar</a>
                 </p>
                 
 
