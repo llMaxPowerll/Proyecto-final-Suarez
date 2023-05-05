@@ -2,7 +2,7 @@
 
 En el inicio se pueden buscar las editoriales cargadas en la base de datos, van a figurar todos los libros de esa editorial
 
-podemos acceder a Autores, Libros y Bibliotecas. Donde cada una muestra que posee en la base de datos y cuenta con el formulario para agregar lo correspondiente.
+podemos acceder a Autores, Libros y Bibliotecas. Donde cada una muestra que posee en la base de datos y cuenta con el formulario para agregar, edita o eliminar lo correspondiente.
 
 los pasos a seguir son: 
 
@@ -10,9 +10,9 @@ clonar el repositorio, correr el entorno virtual y correr el servidor local
 
 los comandos a seguir en terminal serian:
 
-- git clone https://github.com/llMaxPowerll/Tercera-pre-entrega-Suarez.git
+- git clone https://github.com/llMaxPowerll/Proyecto-final-Suarez.git
 
-- cd Tercera
+- cd parafinal
 
 - pip install virtualenv
 
