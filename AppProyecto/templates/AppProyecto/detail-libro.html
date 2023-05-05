@@ -1,0 +1,36 @@
+{% extends 'AppProyecto/padre.html' %}
+
+{% block titulo %}Libros{% endblock %}
+
+{% block encabezado %}Libros{% endblock %}
+
+
+{% block contenido %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class= "col-lg-12"> 
+                
+                <h4>Informacion del libro</h4>
+                <p>titulo: {{libro.titulo}}</p> 
+                <p>cantidad de paginas: {{libro.paginas}}</p>     
+                
+                <p>genero: {{libro.editorial}}</p>
+                
+                <img src="{{ libro.portada.url }}"  height="500px">
+                
+                <p>reseña: {{libro.review}}</p>
+                
+                <p>
+                    <a href="{% url 'reed-libro' %}">Regresar</a>
+                </p>
+                
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+<!-- listo -->

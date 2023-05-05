@@ -1,0 +1,28 @@
+{% extends 'AppProyecto/padre.html' %}
+
+{% block titulo %}Libros{% endblock %}
+
+{% block encabezado %}Libros{% endblock %}
+
+{% block contenido %}
+<section class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class= "col-lg-12"> 
+              
+                
+                <h4>Eliminar libro</h4>
+         
+              
+                <form method="POST">
+                    {% csrf_token %}
+                    <p>Esta seguro de eliminar el libro {{ object }}</p>
+
+                    <input type="submit" value="Seguro">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+<!-- listo -->
