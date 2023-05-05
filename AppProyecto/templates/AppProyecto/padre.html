@@ -24,6 +24,10 @@
                 <a href="{% url 'list-autor' %}">Autores</a>
                 <a href="{% url 'reed-libros' %}">Libros</a>
                 <a href="{% url 'list-biblioteca' %}">Bibliotecas</a>
+
+                <a href="{% url 'list-mensaje' %}">Mensajes</a>
+
+
                 {% if user.is_authenticated %}
                 <p class="navbar-brand" style="margin-top: 1rem;margin-bottom: 1rem;">Hola {{ user.username}}
                 <img src="{{ user.avatar.imagen.url }}" class="rounded-circle" height="40px" style="margin-right: 1rem">

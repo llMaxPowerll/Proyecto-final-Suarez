@@ -6,6 +6,6 @@ from .models import *
 admin.site.register(autor)
 admin.site.register(libro)
 admin.site.register(biblioteca)
-
+admin.site.register(mensaje)
 
 #listo

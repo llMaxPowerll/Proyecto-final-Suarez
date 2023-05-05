@@ -40,3 +40,12 @@ class autor(models.Model):
         
 
 #Listo
+
+class mensaje(models.Model):
+
+   
+    mensaje=models.CharField(max_length=250)
+
+    def __str__(self):
+        return  self.mensaje 
+    

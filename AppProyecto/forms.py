@@ -18,4 +18,9 @@ class AutoresFormulario(forms.Form):
     edad= forms.IntegerField()
     #= forms.BooleanField(required=False)
 
+
 #listo
+
+class MensajesFormulario(forms.Form):
+    
+    mensaje= forms.CharField()

@@ -17,6 +17,20 @@ from .forms import *
 def inicio (request):
     return render(request,'AppProyecto/inicio.html')
 
+
+
+class Add_mensaje(LoginRequiredMixin,CreateView):
+    model = mensaje
+    template_name= 'AppProyecto/add-mensaje.html'
+    success_url = reverse_lazy('list-mensaje')
+    fields = '__all__'
+
+class List_mensaje(ListView):
+
+    model = mensaje
+    template_name = 'AppProyecto/list-mensaje.html'
+
+
 class Add_libro (LoginRequiredMixin,CreateView):
     model = libro
     template_name = 'AppProyecto/add-libro.html'

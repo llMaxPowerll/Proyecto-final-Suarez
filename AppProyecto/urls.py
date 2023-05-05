@@ -28,7 +28,7 @@ urlpatterns = [
     path('update-biblioteca/<pk>',Update_biblioteca.as_view(), name='update-biblioteca'),
     path('delete-biblioteca/<pk>',Delete_biblioteca.as_view(), name='delete-biblioteca'),
 
-
-
+    path('add-mensaje/',Add_mensaje.as_view(), name='add-mensaje'),
+    path('list-mensaje/',List_mensaje.as_view(), name='list-mensaje'),
 ]
 #listo
